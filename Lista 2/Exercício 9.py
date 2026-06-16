@@ -1,5 +1,5 @@
 depositado = float(input("Quanto você investirá por mês? "))
-meses = int(input("Quantos meses? "))
+meses = 24
 
 contador = 1
 total = 0
