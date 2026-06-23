@@ -1,8 +1,8 @@
 listas = []
 for i in range(10): #definindo como -1
-    valor = "-1"
-    listas.append(valor)
-    contador = 0
+    listas.append(-1)
+
+contador = 0
     
 opcao = 3
 while opcao != "0": # inicio
@@ -18,14 +18,18 @@ while opcao != "0": # inicio
 
     if opcao == "1":
         print("contador => ", contador)
-        while contador <= 10:
-            if listas[contador] == "-1":
+
+        while contador < 10:
+            if listas[contador] == -1:
                 sabor = int(input("Digite o novo valor:"))
+
                 if sabor == "-1":
                     break
+
                 else:
-                    valor = sabor
+                    listas[contador] = sabor
                     contador += 1
+                    break
             else:
                 contador += 1
 
