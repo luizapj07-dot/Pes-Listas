@@ -32,6 +32,6 @@ while opcao != 0:
             print(res)
     else:
         print("Opção Inválida!!!.tente denovo!")
-
+a 
 
 
