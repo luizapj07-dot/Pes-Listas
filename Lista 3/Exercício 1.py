@@ -7,5 +7,3 @@ for i in range(6):
 for idade in idades:
     if idade >= 16:
         print(idade)
-
-
