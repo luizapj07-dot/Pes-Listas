@@ -9,8 +9,11 @@ while opcao != 0:
             2 - Excluir
             3 - Listar
             4 - Calcular média
+            5 – Mostrar maior nota
+            6 – Mostrar menor nota
             0 - Sair
             Opção:""")
+    
     opcao = int(input("Digite uma opcao: "))
     
     if opcao == 1:
@@ -47,6 +50,27 @@ while opcao != 0:
             print("Reprovado")
         else:
             print("Aprovado")
+    
+    if opcao == 5:
+        maior = 0
+        if len(notas) == 0:
+            print("Sem notas cadastradas!!")
+        else:
+            for nota in notas:
+                if nota > maior:
+                    maior = nota
+            print(maior)
+
+    if opcao == 6:
+        menor = 11
+        if len(notas) == 0:
+            print("Sem notas cadastradas!!")
+        else:
+            for nota in notas:
+                if nota < menor:
+                    menor = nota
+            print(menor)
+   
     if opcao == 0:
         break
      
