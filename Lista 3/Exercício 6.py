@@ -89,7 +89,7 @@ while opcao != 0:
             )
 
     if opcao == 6:
-        for i in range(len(Pessoas)):
+        for i in range(len(Pessoas)): 
             print(
                 Codigos[i],
                 Pessoas[i],
