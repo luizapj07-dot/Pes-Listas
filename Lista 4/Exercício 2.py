@@ -10,5 +10,5 @@ while contador < Quantidade:
     print(f"A nota é: {Notas[contador]}")
     contador += 1
 
-for nota in Notas
+for nota in Notas:
     print(f"A nota é: {nota}")
