@@ -97,12 +97,14 @@ while opcao != 0:
         if codigo in professores:
             laboratorio = input("Digite o laboratorio que deseja adicionar:")
 
-            professores[codigo]["laboratorio"].append(laboratorio)
+            professores[codigo]["laboratorios"].append(laboratorio)
             print("Acesso adicionado com sucesso!")
         else:
             print("Professor não encontrado!")
+
+        
     elif opcao == 6:
-        codigo = input("Digite o acesso que deseja alterar: ")
+        codigo = input("Digite o código do professor que desejas alterar o acesso: ")
         if codigo in professores:
             laboratorio_atual = input("Laboratório que deseja alterar")
 
@@ -132,22 +134,23 @@ while opcao != 0:
         else:
             print("Professor não encontrado!")
     elif opcao == 8: # não entendi esta parte!!
-        if codigo in professores:
-            print("Professor:", professores[codigo]["nome"])
-            print("Laboratórios:", professores[codigo]["laboratorios"])
-        else:
-            print("Professor não encontrado!")
-    
+        for codigo, dados in professores.items():
+            print ("Código:", codigo)
+            print("Nome:", dados["nome"])
+            print("Laboratórios:", dados["laboratorios"])
+            print("--------------------")
+
     elif opcao == 9:
         codigo = input("Qual professor (código) estás procurando:")
     
         if codigo in professores:
             lab = input("E em que sala: ")
     
-            if lab in professores[codigo]["laboratorio"]:
+            if lab in professores[codigo]["laboratorios"]:
                 print("Professor online")
             else:
                 print("Professor offline")
         else: 
             print("Professor inexistente!")
+
 
