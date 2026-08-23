@@ -137,5 +137,3 @@ while x != 0:
     valor = float(input("Digite uma quantia em dinheiro: "))
 
     print(extenso_reais(conversor_reais(valor)), extenso_centavos(conversor_centavos(valor)))
-
-#Mil de Aura
