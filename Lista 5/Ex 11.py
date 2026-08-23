@@ -138,3 +138,4 @@ while x != 0:
 
     print(extenso_reais(conversor_reais(valor)), extenso_centavos(conversor_centavos(valor)))
 
+#Mil de Aura
