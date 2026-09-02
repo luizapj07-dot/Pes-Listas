@@ -1,12 +1,12 @@
 lista = []
 
-while len(lista) <= 15:
-    num = int(input("Digite um numero: "))
-    if (num < 1 or num > 75) and num not in lista:
-        print("Outro né")
-    else:
-        print("Número registrado com sucesso!! ")
+while len(lista) < 15:
+    num = int(input("Digite um número: "))
+    if 1 <= num <= 75 and not num in lista:
         lista.append(num)
+        print("Número adicionado com sucesso!")
+    else:
+        print("No!")        
 
-lista.sort() #Vai ordenar do menor pro maior
+lista.sort()
 print(lista)
