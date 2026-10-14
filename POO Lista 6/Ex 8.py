@@ -57,14 +57,16 @@ Opção: """)
     r = int(input("Digite a opcao desejada: "))
 
     if r == 1:
-        Estudantex = Estudantex(0, "", "", 0)
+        Estudantex = Estudante(0, "", "", 0)
         Estudantex = Estudantex.cadastroest()
-        Estudantes.append(Estudante)
+        Estudantes.append(Estudantex)
+        print("Exito!")
 
     elif r == 2:
-        Professorx = Professorx(0, "", "", 0, "")
+        Professorx = Professor(0, "", "", 0, "")
         Professorx = Professorx.cadastroprof()
-        Professorx.append(Professor)
+        Professores.append(Professorx)
+        print("Exito!")
 
     elif r == 3:
         for estudante in Estudantes:
@@ -73,4 +75,108 @@ Opção: """)
         for professor in Professores:
             print(professor.matriculap, professor.nomep, professor.sobrenomep, professor.idadep, professor.especializacaop)
     elif r == 5:
+        chocolex = int(input("Digite a matrícula de quem você quer alterar!")) #Matrícula alterar
         
+        encontrado = False
+
+        for estudante in Estudantes:
+            if estudante.matricula == chocolex:
+                print("Estudante existe! Digite os novos dados: ")
+
+                estudante.nome = input("Digite o nome: ")
+                estudante.sobrenome = input("Digite o sobrenome: ")
+                estudante.idade = int(input("Digite a idade: "))
+
+                encontrado = True
+                print("Alteroso")
+                break
+        if not encontrado:
+            print("Não existex")
+    elif r == 6:
+        brr = input("Digite o nome de quem você quer alterar!") #Nome alterar
+        
+        encontrado = False
+
+        for estudante in Estudantes:
+            if estudante.nome == brr:
+                print("Estudante existe! Digite os novos dados: ")
+
+                estudante.nome = input("Digite o nome: ")
+                estudante.sobrenome = input("Digite o sobrenome: ")
+                estudante.idade = int(input("Digite a idade: "))
+
+                encontrado = True
+                print("Alteroso")
+                break
+        if not encontrado:
+            print("Não existex")
+    elif r == 7: 
+        elclassico = int(input("Digite a matrícula do professor que deseja alterar: "))
+
+        encontrado = False
+
+        for professor in Professores:
+            if professor.matriculap == elclassico:
+                print("Professor encontrado! Digite os novos dados:")
+
+                professor.nomep = input("Digite o nome: ")
+                professor.sobrenomep = input("Digite o sobrenome: ")
+                professor.idadep = int(input("Digite a idade: "))
+                professor.especializacaop = input("Digite a especialização: ")
+
+                encontrado = True
+                print("Professor alterado com sucesso!")
+                break
+
+        if not encontrado:
+            print("Professor não encontrado!")
+    elif r == 8:
+        dazu = input("Digite o nome do professor que deseja alterar: ")
+
+        encontrado = False
+
+        for professor in Professores:
+            if professor.nomep == dazu:
+                print("Professor encontrado! Digite os novos dados:")
+
+                professor.nomep = input("Digite o nome: ")
+                professor.sobrenomep = input("Digite o sobrenome: ")
+                professor.idadep = int(input("Digite a idade: "))
+                professor.especializacaop = input("Digite a especialização: ")
+
+                encontrado = True
+                print("Professor alterado com sucesso!")
+                break
+
+        if not encontrado:
+            print("Professor não encontrado!")
+
+    elif r == 9:
+        paper = int(input("Quem vc quer excluir? (pela matricula!)"))
+
+        encontrado = False
+        for estudante in Estudantes:
+            if estudante.matricula == paper:
+                Estudantes.remove(estudante)
+                encontrado = True 
+                print("Exito!")
+                break
+        if not encontrado:
+            print("Estudante não encontrado!")
+            
+    elif r == 10:
+        kane = int(input("Quem vc quer excluir? (pela matricula!)"))
+
+        encontrado = False
+        for professor in Professores:
+            if professor.matriculap == kane:
+                Professores.remove(professor)
+                encontrado = True 
+                print("Exito!")
+                break
+        if not encontrado:
+            print("Professor não encontrado!")
+    elif r == 0:
+        print("Saindo do Sistema!")
+    else:
+        print("Opção Inválida!!")
