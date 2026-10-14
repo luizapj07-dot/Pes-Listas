@@ -1,3 +1,5 @@
+#6
+
 class Pessoa:
     def __init__(self, nome, idade, altura, peso):
         self.nome = nome
@@ -38,4 +40,3 @@ while r != 0:
     else:
         print("Opção Invalida!!!")
 
-#FULL CHAT
