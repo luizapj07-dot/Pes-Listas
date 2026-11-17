@@ -11,10 +11,48 @@ class VagadeEstacionamento:
     def ocupar_vaga(self, carro):
         if self.carro_estacionado == None:
             self.carro_estacionado = carro
-            return "True"
+            return True
         else:
-            return "False"
+            return False
 
-vaga1 = VagadeEstacionamento(1)
-carro = Carro(234789, "Gol")
-print(vaga1.ocupar_vaga(carro))
+    def liberar_vaga(self):
+        if self.carro_estacionado != None:
+            self.carro_estacionado = None
+            return True
+        else:
+            return False
+            
+
+opcao = -1
+
+while opcao != 0:
+    print("""
+          1 -- Add Carro
+          2 -- Add Vaga
+          3 -- ocupar_vaga
+          4 -- Libertar vaga""")
+    
+    opcao = int(input("A opção selecionada será? "))
+
+    if opcao == 1: 
+        placex = input("A placa é: ")
+        chocolex = input("O modelo é: ")
+
+        Carro1 = Carro(placex, chocolex)
+        print("Sucesso!!")
+
+    elif opcao == 2: 
+        idvagax = input("Qual o id da vaga? ")
+        Carro_estacionadox = None
+
+        Vaga1 = VagadeEstacionamento(idvagax)
+        print("Sucesso!")
+
+    elif opcao == 3: 
+        resultado = Vaga1.ocupar_vaga(Carro1)
+        print(resultado)
+        print("Sucesso!")
+    
+    elif opcao == 4:
+        res = Vaga1.liberar_vaga()
+        print(res)
