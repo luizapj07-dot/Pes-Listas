@@ -37,8 +37,7 @@ class Vendedor:
 
 
 class Produto:
-    def __init__(self, Nome_Produto, Id_Produto, Preco_Produto,
-                 Status_Produto, Link_Produto, vendedor):
+    def __init__(self, Nome_Produto, Id_Produto, Preco_Produto, Status_Produto, Link_Produto, vendedor):
 
         self.Nome_Produto = Nome_Produto
         self.Id_Produto = Id_Produto
